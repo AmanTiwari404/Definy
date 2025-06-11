@@ -12,7 +12,7 @@ function App() {
     if (!query.trim()) return;
     setLoading(true);
     try {
-      const res = await axios.post("http://localhost:5000/api/define", { query });
+      const res = await axios.post("https://definy-api.onrender.com/api/define", { query });
       setDefinition(res.data.definition);
     } catch (err) {
       setDefinition("Error fetching definition.");
